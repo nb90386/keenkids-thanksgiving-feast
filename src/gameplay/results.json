@@ -1,0 +1,307 @@
+{
+ "generated": "2026-11-17T22:14:35.258Z",
+ "engine": "scratch-vm + scratch-render (UMD builds), headless Chromium + SwiftShader WebGL, compatibility mode 30 fps",
+ "pass": 14,
+ "fail": 0,
+ "results": [
+  {
+   "demo": 1,
+   "test": "Starter shows Chef, pumpkin, kitchen; no code runs",
+   "method": "Load starter, read sprites, click flag",
+   "measured": {
+    "names": [
+     "Stage",
+     "Chef",
+     "Food"
+    ],
+    "chef": {
+     "id": "QD(c4Ov58d|z0GVszps]",
+     "x": 0,
+     "y": -130,
+     "visible": true,
+     "bubble": ""
+    },
+    "food": {
+     "id": "TN#RTf_ND~aztZuy_N9!",
+     "x": 0,
+     "y": 180,
+     "visible": true,
+     "bubble": ""
+    },
+    "threadsAfterFlag": 0,
+    "chefAfter": {
+     "id": "QD(c4Ov58d|z0GVszps]",
+     "x": 0,
+     "y": -130,
+     "visible": true,
+     "bubble": ""
+    }
+   },
+   "status": "PASS"
+  },
+  {
+   "demo": 2,
+   "test": "Every flag click returns Chef to (0, -130)",
+   "method": "Move Chef away, click flag (twice)",
+   "measured": {
+    "before": {
+     "id": "v2|Qa=w^|KW%mTC/m|4@",
+     "x": 150,
+     "y": 60,
+     "visible": true,
+     "bubble": ""
+    },
+    "after1": {
+     "id": "v2|Qa=w^|KW%mTC/m|4@",
+     "x": 0,
+     "y": -130,
+     "visible": true,
+     "bubble": ""
+    },
+    "after2": {
+     "id": "v2|Qa=w^|KW%mTC/m|4@",
+     "x": 0,
+     "y": -130,
+     "visible": true,
+     "bubble": ""
+    }
+   },
+   "status": "PASS"
+  },
+  {
+   "demo": 3,
+   "test": "Score monitor reads 0 on flag",
+   "method": "Set Score to 7, click flag",
+   "measured": {
+    "before": 7,
+    "after": "0",
+    "monitor": [
+     {
+      "opcode": "data_variable",
+      "visible": true,
+      "value": "0"
+     }
+    ]
+   },
+   "status": "PASS"
+  },
+  {
+   "demo": 4,
+   "test": "Chef follows mouse left/right, stays at y -130",
+   "method": "Post mouse moves at 4 points (incl. top and bottom)",
+   "measured": {
+    "pts": [
+     {
+      "mouseX": 150,
+      "mouseY": 100,
+      "chefX": 150,
+      "chefY": -130
+     },
+     {
+      "mouseX": -180,
+      "mouseY": -40,
+      "chefX": -180,
+      "chefY": -130
+     },
+     {
+      "mouseX": 60,
+      "mouseY": 170,
+      "chefX": 60,
+      "chefY": -130
+     },
+     {
+      "mouseX": -20,
+      "mouseY": -170,
+      "chefX": -20,
+      "chefY": -130
+     }
+    ],
+    "score": "0"
+   },
+   "status": "PASS"
+  },
+  {
+   "demo": 5,
+   "test": "Original pumpkin hides on flag; no copies yet",
+   "method": "Flag, wait 2 s",
+   "measured": {
+    "food": {
+     "id": "69j2*M7ORZe?/KX}{t7=",
+     "x": 0,
+     "y": 180,
+     "visible": false,
+     "bubble": ""
+    },
+    "clones": 0
+   },
+   "status": "PASS"
+  },
+  {
+   "demo": 6,
+   "test": "Spawner keeps making copies every 1–2 s, and they stay hidden",
+   "method": "Flag, watch 10 s (300 frames)",
+   "measured": {
+    "clonesAfter10s": 5,
+    "visibleClones": 0,
+    "gapsFrames": [
+     32,
+     32,
+     62,
+     62
+    ],
+    "minGapS": 1.0666666666666667,
+    "maxGapS": 2.066666666666667
+   },
+   "status": "PASS"
+  },
+  {
+   "demo": 7,
+   "test": "Copies show at y 180 at different x between -200 and 200",
+   "method": "Flag, wait 8 s, read clones",
+   "measured": {
+    "n": 6,
+    "xs": [
+     175,
+     56,
+     -101,
+     191,
+     92,
+     -76
+    ],
+    "ys": [
+     180
+    ],
+    "allVisible": true,
+    "movedAfter1s": false
+   },
+   "status": "PASS"
+  },
+  {
+   "demo": 8,
+   "test": "Copies fall 8 px per frame and stop just below -170 (no cleanup yet)",
+   "method": "Flag, follow first clone frame by frame",
+   "measured": {
+    "firstY": 172,
+    "finalY": -172,
+    "steps": [
+     -8
+    ],
+    "clonesStillThere": 7,
+    "stuckAtBottom": 5
+   },
+   "status": "PASS"
+  },
+  {
+   "demo": 9,
+   "test": "Score goes up when Chef touches food",
+   "method": "Chef placed under the first pumpkin; count points from that one pumpkin",
+   "measured": {
+    "pointsFromOnePumpkin": 13
+   },
+   "status": "PASS"
+  },
+  {
+   "demo": 9,
+   "test": "Known intermediate state: one pumpkin can add more than 1 point",
+   "method": "Same run",
+   "measured": {
+    "pointsFromOnePumpkin": 13
+   },
+   "status": "OBSERVED"
+  },
+  {
+   "demo": 10,
+   "test": "“Feast Ready!” appears at more than 9 points, then the game stops",
+   "method": "Chef under first pumpkin until win",
+   "measured": {
+    "say": {
+     "frame": 101,
+     "sprite": "Food",
+     "isClone": true,
+     "type": "say",
+     "text": "Feast Ready!"
+    },
+    "scoreAtSay": 10,
+    "secondsSayToStop": 1.93,
+    "threadsAfter": 0,
+    "clonesAfter": 0
+   },
+   "status": "PASS"
+  },
+  {
+   "demo": 10,
+   "test": "The speech bubble belongs to a Food clone (the pumpkin), not Chef",
+   "method": "SAY event source",
+   "measured": {
+    "sprite": "Food",
+    "isClone": true
+   },
+   "status": "PASS"
+  },
+  {
+   "demo": 11,
+   "test": "Every catch adds exactly 1 point; caught copies vanish",
+   "method": "Auto-catch: mouse follows the lowest pumpkin; Score must equal copies deleted on a catch + the 1 winning copy still showing its bubble",
+   "measured": {
+    "winnerStillShowing": 1,
+    "framesToWin": 471,
+    "scoreAtSay": 10,
+    "caughtAtSay": 9,
+    "missedAtSay": 0,
+    "maxScorePerFrame": 1,
+    "maxClonesOnStage": 1,
+    "say": {
+     "frame": 470,
+     "sprite": "Food",
+     "isClone": true,
+     "type": "say",
+     "text": "Feast Ready!"
+    }
+   },
+   "status": "PASS"
+  },
+  {
+   "demo": 11,
+   "test": "Win at 10: “Feast Ready!” on the pumpkin, then stop all",
+   "method": "Same run, after the bubble",
+   "measured": {
+    "threads": 0,
+    "clones": 0,
+    "score": 10,
+    "stoppedAfterS": 2.03,
+    "say": {
+     "frame": 470,
+     "sprite": "Food",
+     "isClone": true,
+     "type": "say",
+     "text": "Feast Ready!"
+    }
+   },
+   "status": "PASS"
+  },
+  {
+   "demo": 11,
+   "test": "During the 2-second bubble the game keeps running (Score can pass 10)",
+   "method": "Same run: Score after stop all",
+   "measured": {
+    "scoreAtSay": 10,
+    "scoreAfterStop": 10
+   },
+   "status": "OBSERVED"
+  },
+  {
+   "demo": 11,
+   "test": "Missed food is deleted at the bottom; no pile-up; new copies keep falling",
+   "method": "Chef parked at the far left for 20 s",
+   "measured": {
+    "secondsWatched": 20,
+    "copiesMade": 12,
+    "maxCopiesOnStageAtOnce": 2,
+    "copiesLeftOnFloor": 0,
+    "score": 1,
+    "stillSpawning": true
+   },
+   "status": "PASS"
+  }
+ ]
+}

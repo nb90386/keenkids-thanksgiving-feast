@@ -1,0 +1,12 @@
+{
+  "name": "keenkids-thanksgiving-feast-build",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Build + QA tooling for the KeenKids Thanksgiving Feast deck",
+  "dependencies": {
+    "pptxgenjs": "4.0.1",
+    "scratchblocks": "3.7.1",
+    "playwright-core": "1.65.1",
+    "pdf-lib": "1.17.1"
+  }
+}

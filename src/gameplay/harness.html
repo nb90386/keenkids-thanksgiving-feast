@@ -1,0 +1,52 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Scratch harness</title>
+<style>body{margin:0;background:#222}canvas{width:480px;height:360px;display:block}</style>
+<script src="lib/scratch-storage.js"></script>
+<script src="lib/scratch-render.js"></script>
+<script src="lib/scratch-vm.js"></script>
+</head><body><canvas id="c" width="480" height="360"></canvas>
+<script>
+// Page-side test API. All game logic runs in the real scratch-vm + scratch-render (no re-implementation).
+const H = window.H = {
+  frame: 0, says: [], events: [], waiters: [], onFrame: [], t0: 0,
+  async load(url) {
+    const buf = await (await fetch(url)).arrayBuffer();
+    const vm = this.vm = new VirtualMachine();
+    const St = ScratchStorage.ScratchStorage || ScratchStorage.default || ScratchStorage;
+    vm.attachStorage(new St());
+    const R = ScratchRender.default || ScratchRender;
+    const renderer = this.renderer = new R(document.getElementById('c'));
+    vm.attachRenderer(renderer);
+    renderer.resize(480, 360);
+    await vm.loadProject(buf);
+    const rt = this.rt = vm.runtime;
+    rt.on('SAY', (target, type, text) => this.says.push({ frame: this.frame, sprite: target.sprite.name, isClone: !target.isOriginal, type, text }));
+    rt.on('PROJECT_STOP_ALL', () => this.events.push({ ev: 'STOP_ALL', frame: this.frame }));
+    const orig = rt._step.bind(rt);
+    rt._step = () => {
+      for (const fn of this.onFrame) fn(this.frame, 'pre');
+      orig(); this.frame++; renderer.draw();
+      for (const fn of this.onFrame) fn(this.frame, 'post');
+      this.waiters = this.waiters.filter(w => { if (w.check()) { w.resolve(this.frame); return false; } return true; });
+    };
+    await new Promise(r => setTimeout(r, 300));
+    return rt.targets.map(t => t.getName());
+  },
+  start() { this.vm.setCompatibilityMode(true); this.t0 = performance.now(); this.vm.start(); this.vm.greenFlag(); },
+  startNoFlag() { this.vm.setCompatibilityMode(true); this.vm.start(); },
+  T(name) { return this.rt.getSpriteTargetByName(name); },
+  score() { const s = this.rt.getTargetForStage(); for (const id in s.variables) if (s.variables[id].name === 'Score') return s.variables[id].value; return undefined; },
+  setScore(v) { const s = this.rt.getTargetForStage(); for (const id in s.variables) if (s.variables[id].name === 'Score') s.variables[id].value = v; },
+  clones(name = 'Food') { return this.rt.targets.filter(t => !t.isOriginal && t.sprite.name === name); },
+  info(t) { return { id: t.id, x: +t.x.toFixed(2), y: +t.y.toFixed(2), visible: t.visible, bubble: (t.getCustomState('Scratch.looks') || {}).text || '' }; },
+  mouse(stageX, stageY = 0) { this.vm.postIOData('mouse', { x: stageX + 240, y: 180 - stageY, canvasWidth: 480, canvasHeight: 360 }); },
+  frames(n) { const target = this.frame + n; return new Promise(resolve => this.waiters.push({ check: () => this.frame >= target, resolve })); },
+  until(pred, max = 300) { const lim = this.frame + max; return new Promise(resolve => this.waiters.push({ check: () => { if (pred()) return true; if (this.frame >= lim) { resolve(null); return true; } return false; }, resolve })); },
+  capture() {
+    const r = this.renderer, c = r._gl.canvas;
+    r.resize(960 / devicePixelRatio, 720 / devicePixelRatio); r.draw(); const x2 = c.toDataURL('image/png');
+    r.resize(480, 360); r.draw();
+    return x2;
+  },
+};
+</script></body></html>

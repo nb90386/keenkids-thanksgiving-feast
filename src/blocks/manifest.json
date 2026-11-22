@@ -1,0 +1,1321 @@
+{
+ "s05_code": {
+  "code": "when green flag clicked\ngo to x: (0) y: (-130)",
+  "newSpec": [
+   "when clicked",
+   "go to x: 0 y: -130"
+  ],
+  "w": 207.3919219970703,
+  "h": 122,
+  "sigs": [
+   "when clicked",
+   "go to x: 0 y: -130"
+  ],
+  "cats": [
+   "events",
+   "motion"
+  ],
+  "isNew": [
+   true,
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 2,
+  "newBox": {
+   "x0": 1.9999874830245972,
+   "y0": 0.5003783702850342,
+   "x1": 205.39064300060272,
+   "y1": 120.99962615966797
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   },
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 1
+   }
+  ]
+ },
+ "s07_code": {
+  "code": "when green flag clicked\ngo to x: (0) y: (-130)\nset [Score v] to (0)",
+  "newSpec": [
+   "set Score to 0"
+  ],
+  "w": 215.80795288085938,
+  "h": 170,
+  "sigs": [
+   "when clicked",
+   "go to x: 0 y: -130",
+   "set Score to 0"
+  ],
+  "cats": [
+   "events",
+   "motion",
+   "variables"
+  ],
+  "isNew": [
+   false,
+   false,
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 1,
+  "newBox": {
+   "x0": 1.9998973608016968,
+   "y0": 112.99856567382812,
+   "x1": 213.79698598384857,
+   "y1": 168.9956817626953
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   },
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 1
+   },
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 2
+   }
+  ]
+ },
+ "s08_code": {
+  "code": "set [Score v] to (0)\nforever\nend",
+  "newSpec": [
+   "forever"
+  ],
+  "w": 215.80795288085938,
+  "h": 154,
+  "sigs": [
+   "set Score to 0",
+   "forever"
+  ],
+  "cats": [
+   "variables",
+   "control"
+  ],
+  "isNew": [
+   false,
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 1,
+  "newBox": {
+   "x0": 1.9998973608016968,
+   "y0": 49.00143814086914,
+   "x1": 161.99168813228607,
+   "y1": 152.99609756469727
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   },
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 1
+   }
+  ]
+ },
+ "s09_code": {
+  "code": "forever\nset x to (mouse x)\nend",
+  "newSpec": [
+   "set x to",
+   "mouse x"
+  ],
+  "w": 184.6638946533203,
+  "h": 130,
+  "sigs": [
+   "forever",
+   "set x to",
+   "mouse x"
+  ],
+  "cats": [
+   "control",
+   "motion",
+   "sensing"
+  ],
+  "isNew": [
+   false,
+   true,
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 2,
+  "newBox": {
+   "x0": 17.99925422668457,
+   "y0": 49.00066375732422,
+   "x1": 183.65629768371582,
+   "y1": 104.99834442138672
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   },
+   {
+    "parent": 0,
+    "stack": 1,
+    "pos": 0
+   },
+   {
+    "parent": 1,
+    "stack": null,
+    "pos": null
+   }
+  ]
+ },
+ "s11_code": {
+  "code": "when green flag clicked\nhide",
+  "newSpec": [
+   "when clicked",
+   "hide"
+  ],
+  "w": 148.47991943359375,
+  "h": 122,
+  "sigs": [
+   "when clicked",
+   "hide"
+  ],
+  "cats": [
+   "events",
+   "looks"
+  ],
+  "isNew": [
+   true,
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 2,
+  "newBox": {
+   "x0": 1.999849557876587,
+   "y0": 0.504551112651825,
+   "x1": 146.46890473365784,
+   "y1": 120.9954833984375
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   },
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 1
+   }
+  ]
+ },
+ "s12_code": {
+  "code": "hide\nforever\nwait (1) seconds\nend",
+  "newSpec": [
+   "forever",
+   "wait 1 seconds"
+  ],
+  "w": 185.84793090820312,
+  "h": 178,
+  "sigs": [
+   "hide",
+   "forever",
+   "wait 1 seconds"
+  ],
+  "cats": [
+   "looks",
+   "control",
+   "control"
+  ],
+  "isNew": [
+   false,
+   true,
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 2,
+  "newBox": {
+   "x0": 1.9999550580978394,
+   "y0": 49.00090026855469,
+   "x1": 184.8437728881836,
+   "y1": 176.99801635742188
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   },
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 1
+   },
+   {
+    "parent": 1,
+    "stack": 1,
+    "pos": 0
+   }
+  ]
+ },
+ "s13_code": {
+  "code": "forever\nwait (pick random (1) to (2)) seconds\ncreate clone of (myself v)\nend",
+  "newSpec": [
+   "pick random 1 to 2",
+   "create clone of myself"
+  ],
+  "w": 373.12782287597656,
+  "h": 178,
+  "sigs": [
+   "forever",
+   "wait seconds",
+   "pick random 1 to 2",
+   "create clone of myself"
+  ],
+  "cats": [
+   "control",
+   "control",
+   "operators",
+   "control"
+  ],
+  "isNew": [
+   false,
+   false,
+   true,
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 2,
+  "newBox": {
+   "x0": 17.99986457824707,
+   "y0": 53.00027084350586,
+   "x1": 293.27770233154297,
+   "y1": 152.99951171875
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   },
+   {
+    "parent": 0,
+    "stack": 1,
+    "pos": 0
+   },
+   {
+    "parent": 1,
+    "stack": null,
+    "pos": null
+   },
+   {
+    "parent": 0,
+    "stack": 1,
+    "pos": 1
+   }
+  ]
+ },
+ "s14_code": {
+  "code": "when I start as a clone\nshow",
+  "newSpec": [
+   "when I start as a clone",
+   "show"
+  ],
+  "w": 186.30384826660156,
+  "h": 122,
+  "sigs": [
+   "when I start as a clone",
+   "show"
+  ],
+  "cats": [
+   "control",
+   "looks"
+  ],
+  "isNew": [
+   true,
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 2,
+  "newBox": {
+   "x0": 1.999925136566162,
+   "y0": 0.5022644996643066,
+   "x1": 184.2969527244568,
+   "y1": 120.99775695800781
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   },
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 1
+   }
+  ]
+ },
+ "s15_code": {
+  "code": "show\ngo to x: (pick random (-200) to (200)) y: (180)",
+  "newSpec": [
+   "go to x: y: 180",
+   "pick random -200 to 200"
+  ],
+  "w": 412.04779052734375,
+  "h": 106,
+  "sigs": [
+   "show",
+   "go to x: y: 180",
+   "pick random -200 to 200"
+  ],
+  "cats": [
+   "looks",
+   "motion",
+   "operators"
+  ],
+  "isNew": [
+   false,
+   true,
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 2,
+  "newBox": {
+   "x0": 1.9999955892562866,
+   "y0": 49.00000762939453,
+   "x1": 410.0468705892563,
+   "y1": 104.99988555908203
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   },
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 1
+   },
+   {
+    "parent": 1,
+    "stack": null,
+    "pos": null
+   }
+  ]
+ },
+ "s17_code": {
+  "code": "repeat until <() < (-170)>\nend",
+  "newSpec": [
+   "repeat until",
+   "< -170"
+  ],
+  "w": 271.5038757324219,
+  "h": 114,
+  "sigs": [
+   "repeat until",
+   "< -170"
+  ],
+  "cats": [
+   "control",
+   "operators"
+  ],
+  "isNew": [
+   true,
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 2,
+  "newBox": {
+   "x0": 1.9999715089797974,
+   "y0": 1.0007994174957275,
+   "x1": 269.50003254413605,
+   "y1": 112.99919724464417
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   },
+   {
+    "parent": 0,
+    "stack": null,
+    "pos": null
+   }
+  ]
+ },
+ "s17_map": {
+  "code": "when I start as a clone\nshow\ngo to x: (pick random (-200) to (200)) y: (180)\nrepeat until <() < (-170)>\nend",
+  "newSpec": [
+   "repeat until",
+   "< -170"
+  ],
+  "w": 412.04779052734375,
+  "h": 274,
+  "sigs": [
+   "when I start as a clone",
+   "show",
+   "go to x: y: 180",
+   "pick random -200 to 200",
+   "repeat until",
+   "< -170"
+  ],
+  "cats": [
+   "control",
+   "looks",
+   "motion",
+   "operators",
+   "control",
+   "operators"
+  ],
+  "isNew": [
+   false,
+   false,
+   false,
+   false,
+   true,
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 2,
+  "newBox": {
+   "x0": 1.9999955892562866,
+   "y0": 160.9999542236328,
+   "x1": 269.50326097011566,
+   "y1": 272.99969482421875
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   },
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 1
+   },
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 2
+   },
+   {
+    "parent": 2,
+    "stack": null,
+    "pos": null
+   },
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 3
+   },
+   {
+    "parent": 4,
+    "stack": null,
+    "pos": null
+   }
+  ]
+ },
+ "s18_code": {
+  "code": "repeat until <(y position) < (-170)>\nend",
+  "newSpec": [
+   "y position"
+  ],
+  "w": 331.5357666015625,
+  "h": 122,
+  "sigs": [
+   "repeat until",
+   "< -170",
+   "y position"
+  ],
+  "cats": [
+   "control",
+   "operators",
+   "motion"
+  ],
+  "isNew": [
+   false,
+   false,
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 1,
+  "newBox": {
+   "x0": 124.99019622802734,
+   "y0": 9.00070858001709,
+   "x1": 221.02078247070312,
+   "y1": 49.000163078308105
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   },
+   {
+    "parent": 0,
+    "stack": null,
+    "pos": null
+   },
+   {
+    "parent": 1,
+    "stack": null,
+    "pos": null
+   }
+  ]
+ },
+ "s19_code": {
+  "code": "repeat until <(y position) < (-170)>\nchange y by (-8)\nend",
+  "newSpec": [
+   "change y by -8"
+  ],
+  "w": 331.5357666015625,
+  "h": 146,
+  "sigs": [
+   "repeat until",
+   "< -170",
+   "y position",
+   "change y by -8"
+  ],
+  "cats": [
+   "control",
+   "operators",
+   "motion",
+   "motion"
+  ],
+  "isNew": [
+   false,
+   false,
+   false,
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 1,
+  "newBox": {
+   "x0": 17.999753952026367,
+   "y0": 57.00021743774414,
+   "x1": 171.82157707214355,
+   "y1": 112.99945831298828
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   },
+   {
+    "parent": 0,
+    "stack": null,
+    "pos": null
+   },
+   {
+    "parent": 1,
+    "stack": null,
+    "pos": null
+   },
+   {
+    "parent": 0,
+    "stack": 1,
+    "pos": 0
+   }
+  ]
+ },
+ "s20_code": {
+  "code": "change y by (-8)\nif <touching (Chef v)?> then\nend",
+  "newSpec": [
+   "if then",
+   "touching Chef ?"
+  ],
+  "w": 306.7678527832031,
+  "h": 162,
+  "sigs": [
+   "change y by -8",
+   "if then",
+   "touching Chef ?"
+  ],
+  "cats": [
+   "motion",
+   "control",
+   "sensing"
+  ],
+  "isNew": [
+   false,
+   true,
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 2,
+  "newBox": {
+   "x0": 1.9999854564666748,
+   "y0": 49.0002326965332,
+   "x1": 304.7656104564667,
+   "y1": 160.9994239807129
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   },
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 1
+   },
+   {
+    "parent": 1,
+    "stack": null,
+    "pos": null
+   }
+  ]
+ },
+ "s20_map": {
+  "code": "repeat until <(y position) < (-170)>\nchange y by (-8)\nif <touching (Chef v)?> then\nend\nend",
+  "newSpec": [
+   "if then",
+   "touching Chef ?"
+  ],
+  "w": 331.5357666015625,
+  "h": 250,
+  "sigs": [
+   "repeat until",
+   "< -170",
+   "y position",
+   "change y by -8",
+   "if then",
+   "touching Chef ?"
+  ],
+  "cats": [
+   "control",
+   "operators",
+   "motion",
+   "motion",
+   "control",
+   "sensing"
+  ],
+  "isNew": [
+   false,
+   false,
+   false,
+   false,
+   true,
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 2,
+  "newBox": {
+   "x0": 17.999753952026367,
+   "y0": 105.00027465820312,
+   "x1": 320.7634868621826,
+   "y1": 216.99874877929688
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   },
+   {
+    "parent": 0,
+    "stack": null,
+    "pos": null
+   },
+   {
+    "parent": 1,
+    "stack": null,
+    "pos": null
+   },
+   {
+    "parent": 0,
+    "stack": 1,
+    "pos": 0
+   },
+   {
+    "parent": 0,
+    "stack": 1,
+    "pos": 1
+   },
+   {
+    "parent": 4,
+    "stack": null,
+    "pos": null
+   }
+  ]
+ },
+ "s21_code": {
+  "code": "if <touching (Chef v)?> then\nchange [Score v] by (1)\nend",
+  "newSpec": [
+   "change Score by 1"
+  ],
+  "w": 306.7678527832031,
+  "h": 138,
+  "sigs": [
+   "if then",
+   "touching Chef ?",
+   "change Score by 1"
+  ],
+  "cats": [
+   "control",
+   "sensing",
+   "variables"
+  ],
+  "isNew": [
+   false,
+   false,
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 1,
+  "newBox": {
+   "x0": 17.999868392944336,
+   "y0": 49.000144958496094,
+   "x1": 255.61404991149902,
+   "y1": 104.99974060058594
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   },
+   {
+    "parent": 0,
+    "stack": null,
+    "pos": null
+   },
+   {
+    "parent": 0,
+    "stack": 1,
+    "pos": 0
+   }
+  ]
+ },
+ "s23_code": {
+  "code": "change [Score v] by (1)\nif <(Score) > (9)> then\nend",
+  "newSpec": [
+   "if then",
+   "> 9",
+   "Score"
+  ],
+  "w": 277.1839294433594,
+  "h": 170,
+  "sigs": [
+   "change Score by 1",
+   "if then",
+   "> 9",
+   "Score"
+  ],
+  "cats": [
+   "variables",
+   "control",
+   "operators",
+   "variables"
+  ],
+  "isNew": [
+   false,
+   true,
+   true,
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 3,
+  "newBox": {
+   "x0": 1.999912977218628,
+   "y0": 49.001564025878906,
+   "x1": 275.1719710826874,
+   "y1": 168.99635314941406
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   },
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 1
+   },
+   {
+    "parent": 1,
+    "stack": null,
+    "pos": null
+   },
+   {
+    "parent": 2,
+    "stack": null,
+    "pos": null
+   }
+  ]
+ },
+ "s23_map": {
+  "code": "if <touching (Chef v)?> then\nchange [Score v] by (1)\nif <(Score) > (9)> then\nend\nend",
+  "newSpec": [
+   "if then@2",
+   "> 9",
+   "Score"
+  ],
+  "w": 306.7678527832031,
+  "h": 250,
+  "sigs": [
+   "if then",
+   "touching Chef ?",
+   "change Score by 1",
+   "if then",
+   "> 9",
+   "Score"
+  ],
+  "cats": [
+   "control",
+   "sensing",
+   "variables",
+   "control",
+   "operators",
+   "variables"
+  ],
+  "isNew": [
+   false,
+   false,
+   false,
+   true,
+   true,
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 3,
+  "newBox": {
+   "x0": 17.999868392944336,
+   "y0": 97.00020599365234,
+   "x1": 291.1818141937256,
+   "y1": 216.99932861328125
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   },
+   {
+    "parent": 0,
+    "stack": null,
+    "pos": null
+   },
+   {
+    "parent": 0,
+    "stack": 1,
+    "pos": 0
+   },
+   {
+    "parent": 0,
+    "stack": 1,
+    "pos": 1
+   },
+   {
+    "parent": 3,
+    "stack": null,
+    "pos": null
+   },
+   {
+    "parent": 4,
+    "stack": null,
+    "pos": null
+   }
+  ]
+ },
+ "s24_code": {
+  "code": "if <(Score) > (9)> then\nsay [Feast Ready!] for (2) seconds\nstop [all v]\nend",
+  "newSpec": [
+   "say Feast Ready! for 2 seconds",
+   "stop all"
+  ],
+  "w": 340.9518127441406,
+  "h": 194,
+  "sigs": [
+   "if then",
+   "> 9",
+   "Score",
+   "say Feast Ready! for 2 seconds",
+   "stop all"
+  ],
+  "cats": [
+   "control",
+   "operators",
+   "variables",
+   "looks",
+   "control"
+  ],
+  "isNew": [
+   false,
+   false,
+   false,
+   true,
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 2,
+  "newBox": {
+   "x0": 17.999244689941406,
+   "y0": 57.001678466796875,
+   "x1": 339.93753814697266,
+   "y1": 152.99765014648438
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   },
+   {
+    "parent": 0,
+    "stack": null,
+    "pos": null
+   },
+   {
+    "parent": 1,
+    "stack": null,
+    "pos": null
+   },
+   {
+    "parent": 0,
+    "stack": 1,
+    "pos": 0
+   },
+   {
+    "parent": 0,
+    "stack": 1,
+    "pos": 1
+   }
+  ]
+ },
+ "s25_map": {
+  "code": "if <touching (Chef v)?> then\nchange [Score v] by (1)\nif <(Score) > (9)> then\nsay [Feast Ready!] for (2) seconds\nstop [all v]\nend\ndelete this clone\nend",
+  "newSpec": [
+   "delete this clone"
+  ],
+  "w": 355.9518127441406,
+  "h": 370,
+  "sigs": [
+   "if then",
+   "touching Chef ?",
+   "change Score by 1",
+   "if then",
+   "> 9",
+   "Score",
+   "say Feast Ready! for 2 seconds",
+   "stop all",
+   "delete this clone"
+  ],
+  "cats": [
+   "control",
+   "sensing",
+   "variables",
+   "control",
+   "operators",
+   "variables",
+   "looks",
+   "control",
+   "control"
+  ],
+  "isNew": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 1,
+  "newBox": {
+   "x0": 17.999277114868164,
+   "y0": 280.99615478515625,
+   "x1": 155.52959632873535,
+   "y1": 328.99420166015625
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   },
+   {
+    "parent": 0,
+    "stack": null,
+    "pos": null
+   },
+   {
+    "parent": 0,
+    "stack": 1,
+    "pos": 0
+   },
+   {
+    "parent": 0,
+    "stack": 1,
+    "pos": 1
+   },
+   {
+    "parent": 3,
+    "stack": null,
+    "pos": null
+   },
+   {
+    "parent": 4,
+    "stack": null,
+    "pos": null
+   },
+   {
+    "parent": 3,
+    "stack": 2,
+    "pos": 0
+   },
+   {
+    "parent": 3,
+    "stack": 2,
+    "pos": 1
+   },
+   {
+    "parent": 0,
+    "stack": 1,
+    "pos": 2
+   }
+  ]
+ },
+ "s25_block": {
+  "code": "delete this clone",
+  "newSpec": [
+   "delete this clone"
+  ],
+  "w": 141.53585815429688,
+  "h": 50,
+  "sigs": [
+   "delete this clone"
+  ],
+  "cats": [
+   "control"
+  ],
+  "isNew": [
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 1,
+  "newBox": {
+   "x0": 1.9999349117279053,
+   "y0": 1.0007814168930054,
+   "x1": 139.5313069820404,
+   "y1": 48.9992173910141
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   }
+  ]
+ },
+ "s26_map": {
+  "code": "repeat until <(y position) < (-170)>\nchange y by (-8)\nif <touching (Chef v)?> then\nchange [Score v] by (1)\nif <(Score) > (9)> then\nsay [Feast Ready!] for (2) seconds\nstop [all v]\nend\ndelete this clone\nend\nend\ndelete this clone",
+  "newSpec": [
+   "delete this clone@2"
+  ],
+  "w": 370.9518127441406,
+  "h": 546,
+  "sigs": [
+   "repeat until",
+   "< -170",
+   "y position",
+   "change y by -8",
+   "if then",
+   "touching Chef ?",
+   "change Score by 1",
+   "if then",
+   "> 9",
+   "Score",
+   "say Feast Ready! for 2 seconds",
+   "stop all",
+   "delete this clone",
+   "delete this clone"
+  ],
+  "cats": [
+   "control",
+   "operators",
+   "motion",
+   "motion",
+   "control",
+   "sensing",
+   "variables",
+   "control",
+   "operators",
+   "variables",
+   "looks",
+   "control",
+   "control",
+   "control"
+  ],
+  "isNew": [
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   false,
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 1,
+  "newBox": {
+   "x0": 1.9999228715896606,
+   "y0": 496.9913635253906,
+   "x1": 139.53047096729279,
+   "y1": 544.989501953125
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   },
+   {
+    "parent": 0,
+    "stack": null,
+    "pos": null
+   },
+   {
+    "parent": 1,
+    "stack": null,
+    "pos": null
+   },
+   {
+    "parent": 0,
+    "stack": 1,
+    "pos": 0
+   },
+   {
+    "parent": 0,
+    "stack": 1,
+    "pos": 1
+   },
+   {
+    "parent": 4,
+    "stack": null,
+    "pos": null
+   },
+   {
+    "parent": 4,
+    "stack": 2,
+    "pos": 0
+   },
+   {
+    "parent": 4,
+    "stack": 2,
+    "pos": 1
+   },
+   {
+    "parent": 7,
+    "stack": null,
+    "pos": null
+   },
+   {
+    "parent": 8,
+    "stack": null,
+    "pos": null
+   },
+   {
+    "parent": 7,
+    "stack": 3,
+    "pos": 0
+   },
+   {
+    "parent": 7,
+    "stack": 3,
+    "pos": 1
+   },
+   {
+    "parent": 4,
+    "stack": 2,
+    "pos": 2
+   },
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 1
+   }
+  ]
+ },
+ "s26_block": {
+  "code": "delete this clone",
+  "newSpec": [
+   "delete this clone"
+  ],
+  "w": 141.53585815429688,
+  "h": 50,
+  "sigs": [
+   "delete this clone"
+  ],
+  "cats": [
+   "control"
+  ],
+  "isNew": [
+   true
+  ],
+  "unmatched": [],
+  "bad": 0,
+  "newCount": 1,
+  "newBox": {
+   "x0": 1.9999349117279053,
+   "y0": 1.0007814168930054,
+   "x1": 139.5313069820404,
+   "y1": 48.9992173910141
+  },
+  "struct": [
+   {
+    "parent": -1,
+    "stack": 0,
+    "pos": 0
+   }
+  ]
+ }
+}

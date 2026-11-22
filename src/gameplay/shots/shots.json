@@ -1,0 +1,30 @@
+{
+ "starter": {
+  "score": null,
+  "chefX": 0
+ },
+ "chef_follow": {
+  "score": 0,
+  "chefX": 120
+ },
+ "clones_top": {
+  "score": 0,
+  "chefX": 0
+ },
+ "falling": {
+  "score": 0,
+  "chefX": -230
+ },
+ "catch": {
+  "score": 4,
+  "chefX": -113
+ },
+ "feast_ready": {
+  "score": 10,
+  "chefX": -81
+ },
+ "midgame": {
+  "score": 5,
+  "chefX": 74
+ }
+}
